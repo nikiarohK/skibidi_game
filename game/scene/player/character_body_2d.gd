@@ -7,6 +7,7 @@ var direction := 1
 var flag_jump = true
 
 @onready var anim = $AnimatedSprite2D
+@onready var sound = $AudioStreamPlayer
 
 func _physics_process(delta: float) -> void:
 	# Гравитация
@@ -27,6 +28,7 @@ func _physics_process(delta: float) -> void:
 		anim.flip_h = true
 	# Управления прыжка
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		sound.play()
 		flag_jump = true
 		velocity.y = JUMP_VELOCITY
 		velocity.x = 1 * SPEED

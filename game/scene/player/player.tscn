@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://c3135dcqejfba"]
+[gd_scene load_steps=10 format=3 uid="uid://kmjy3lhhxccs"]
 
 [ext_resource type="Texture2D" uid="uid://s6r5os7lrvgw" path="res://assets/Character sprite/jus_skibidi_toilet_spritesheet_by_hydraprodev_dgj6rtr.png" id="1_bu6sg"]
 [ext_resource type="Script" path="res://scene/player/character_body_2d.gd" id="1_whjm4"]
+[ext_resource type="AudioStream" uid="uid://dmpfcd15rt504" path="res://sound/1539153129_cartoon-boing.mp3" id="3_58bgx"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_675fu"]
 radius = 10.8441
@@ -68,3 +69,6 @@ autoplay = "Idle"
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 offset = Vector2(0, -100)
 zoom = Vector2(2, 2)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CharacterBody2D"]
+stream = ExtResource("3_58bgx")
