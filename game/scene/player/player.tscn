@@ -5,7 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://bbter3bxaka26" path="res://sound/jump.mp3" id="3_veuxr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_675fu"]
-radius = 10.8441
+radius = 9.17577
 height = 38.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5mehi"]
