@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dpdxvrpycscpp"]
+[gd_scene load_steps=3 format=3 uid="uid://dpdxvrpycscpp"]
 
-[ext_resource type="PackedScene" uid="uid://b34u72hvy6prt" path="res://levels/BG/bg.tscn" id="1_m8boe"]
+[ext_resource type="Script" path="res://level_select.gd" id="1_agp1d"]
+[ext_resource type="PackedScene" uid="uid://b34u72hvy6prt" path="res://scene/levels/BG/bg.tscn" id="1_m8boe"]
 
 [node name="LevelSelect" type="Node2D"]
+script = ExtResource("1_agp1d")
 
 [node name="BG" parent="." instance=ExtResource("1_m8boe")]
 
@@ -97,3 +99,5 @@ offset_left = 665.0
 offset_top = 255.0
 offset_right = 756.0
 offset_bottom = 346.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
