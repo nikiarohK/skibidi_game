@@ -101,6 +101,7 @@ script = ExtResource("3_hasny")
 position = Vector2(19.6357, -45.0737)
 rotation = 0.226229
 shape = SubResource("RectangleShape2D_sf1sx")
+debug_color = Color(3.27289e-06, 0.604897, 0.670853, 0.42)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(0, -32.2981)
@@ -116,7 +117,6 @@ frame_progress = 0.766147
 
 [node name="wall_trigger" type="Area2D" parent="CharacterBody2D"]
 position = Vector2(0, -37)
-scale = Vector2(1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/wall_trigger"]
 position = Vector2(0, 20.8509)

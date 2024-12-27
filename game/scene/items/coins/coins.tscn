@@ -1,0 +1,74 @@
+[gd_scene load_steps=11 format=3 uid="uid://qe0yeg0w4jay"]
+
+[ext_resource type="Texture2D" uid="uid://7l5engu41dty" path="res://assets/items/MonedaP.png" id="1_4fw0g"]
+[ext_resource type="Script" path="res://scene/items/coins/area_2d.gd" id="1_hqx6t"]
+[ext_resource type="AudioStream" uid="uid://8cpdgynvi072" path="res://sound/popolnenie-scheta-v-kompyuternoy-igre.mp3" id="3_j824j"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_emqv0"]
+radius = 6.83761
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vi6ce"]
+atlas = ExtResource("1_4fw0g")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t8dep"]
+atlas = ExtResource("1_4fw0g")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8xvo4"]
+atlas = ExtResource("1_4fw0g")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_02pq3"]
+atlas = ExtResource("1_4fw0g")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g8i07"]
+atlas = ExtResource("1_4fw0g")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ow6m8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vi6ce")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t8dep")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8xvo4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_02pq3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g8i07")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 8.0
+}]
+
+[node name="coins" type="Node2D" groups=["items"]]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_hqx6t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visibility_layer = 3
+scale = Vector2(0.585, 0.585)
+shape = SubResource("CircleShape2D_emqv0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+scale = Vector2(0.585, 0.585)
+sprite_frames = SubResource("SpriteFrames_ow6m8")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.331655
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_j824j")
+volume_db = -10.0
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
