@@ -1,0 +1,99 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpdxvrpycscpp"]
+
+[ext_resource type="PackedScene" uid="uid://b34u72hvy6prt" path="res://levels/BG/bg.tscn" id="1_m8boe"]
+
+[node name="LevelSelect" type="Node2D"]
+
+[node name="BG" parent="." instance=ExtResource("1_m8boe")]
+
+[node name="Button" type="Button" parent="."]
+offset_left = 199.0
+offset_top = 112.0
+offset_right = 290.0
+offset_bottom = 203.0
+theme_override_font_sizes/font_size = 61
+text = "1"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 665.0
+offset_top = 112.0
+offset_right = 756.0
+offset_bottom = 203.0
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 512.0
+offset_top = 393.0
+offset_right = 603.0
+offset_bottom = 484.0
+
+[node name="Button4" type="Button" parent="."]
+offset_left = 356.0
+offset_top = 393.0
+offset_right = 447.0
+offset_bottom = 484.0
+
+[node name="Button5" type="Button" parent="."]
+offset_left = 512.0
+offset_top = 112.0
+offset_right = 603.0
+offset_bottom = 203.0
+
+[node name="Button6" type="Button" parent="."]
+offset_left = 512.0
+offset_top = 255.0
+offset_right = 603.0
+offset_bottom = 346.0
+
+[node name="Button7" type="Button" parent="."]
+offset_left = 356.0
+offset_top = 255.0
+offset_right = 447.0
+offset_bottom = 346.0
+
+[node name="Button8" type="Button" parent="."]
+offset_left = 199.0
+offset_top = 393.0
+offset_right = 290.0
+offset_bottom = 484.0
+
+[node name="Button9" type="Button" parent="."]
+offset_left = 199.0
+offset_top = 255.0
+offset_right = 290.0
+offset_bottom = 346.0
+
+[node name="Button10" type="Button" parent="."]
+offset_left = 356.0
+offset_top = 112.0
+offset_right = 447.0
+offset_bottom = 203.0
+
+[node name="Button11" type="Button" parent="."]
+offset_left = 826.0
+offset_top = 393.0
+offset_right = 917.0
+offset_bottom = 484.0
+
+[node name="Button12" type="Button" parent="."]
+offset_left = 826.0
+offset_top = 255.0
+offset_right = 917.0
+offset_bottom = 346.0
+
+[node name="Button13" type="Button" parent="."]
+offset_left = 826.0
+offset_top = 112.0
+offset_right = 917.0
+offset_bottom = 203.0
+
+[node name="Button14" type="Button" parent="."]
+offset_left = 665.0
+offset_top = 393.0
+offset_right = 756.0
+offset_bottom = 484.0
+
+[node name="Button15" type="Button" parent="."]
+offset_left = 665.0
+offset_top = 255.0
+offset_right = 756.0
+offset_bottom = 346.0
