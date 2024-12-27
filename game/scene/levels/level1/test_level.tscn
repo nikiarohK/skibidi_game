@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dhbo88dw11u77" path="res://assets/tileset/free-exclusion-zone-tileset-pixel-art/2 Background/Night/3.png" id="4_7nxxh"]
 [ext_resource type="PackedScene" uid="uid://r0ckknak2y63" path="res://scene/enemy/enemy.tscn" id="7_c5mjy"]
 [ext_resource type="Texture2D" uid="uid://dcknbl4iwb8gm" path="res://assets/tileset/Power-Station-Free-Tileset-Pixel-Art/1 Tiles/Tileset.png" id="7_m1xge"]
-[ext_resource type="PackedScene" uid="uid://kmjy3lhhxccs" path="res://scene/player/player.tscn" id="7_qadan"]
+[ext_resource type="PackedScene" uid="uid://c3135dcqejfba" path="res://scene/player/player.tscn" id="7_qadan"]
 [ext_resource type="PackedScene" uid="uid://8jnidwlxccri" path="res://scene/obsicle/spike.tscn" id="8_hdodm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n34xq"]
