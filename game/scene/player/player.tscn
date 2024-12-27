@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://c3135dcqejfba"]
 
-[ext_resource type="Texture2D" uid="uid://clrdwno1sx3ig" path="res://assets/Character sprite/jus_skibidi_toilet_spritesheet_by_hydraprodev_dgj6rtr.png" id="1_bu6sg"]
+[ext_resource type="Texture2D" uid="uid://s6r5os7lrvgw" path="res://assets/Character sprite/jus_skibidi_toilet_spritesheet_by_hydraprodev_dgj6rtr.png" id="1_bu6sg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_675fu"]
 radius = 10.8441
