@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 
-var SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+var SPEED = 200.0
+const JUMP_VELOCITY = -300.0
 var direction := 1
 var flag_jump = true
 
@@ -20,10 +20,10 @@ func _physics_process(delta: float) -> void:
 		velocity.x = 0
 	# Смотрим, что было нажато и выбираем направление
 	if Input.is_action_just_pressed("move_right"):
-		SPEED = 300.0
+		SPEED = abs(SPEED)
 		anim.flip_h = false
 	if Input.is_action_just_pressed("move_left"):
-		SPEED = -300.0
+		SPEED = -abs(SPEED)
 		anim.flip_h = true
 	# Управления прыжка
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():

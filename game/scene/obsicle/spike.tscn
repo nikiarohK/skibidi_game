@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://8jnidwlxccri"]
+
+[ext_resource type="Script" path="res://scene/obsicle/spike.gd" id="1_st2h3"]
+[ext_resource type="Texture2D" uid="uid://bnam4a3l3nhij" path="res://assets/tileset/free-exclusion-zone-tileset-pixel-art/3 Objects/Stones/3.png" id="2_4lsk1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pr6fi"]
+size = Vector2(30, 29)
+
+[node name="Spike" type="Node2D"]
+script = ExtResource("1_st2h3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.783784, 1.70588)
+texture = ExtResource("2_4lsk1")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_pr6fi")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://bfj0ybqogcran"]
+[gd_scene load_steps=11 format=4 uid="uid://bfj0ybqogcran"]
 
 [ext_resource type="Texture2D" uid="uid://dpa86l7drwhwl" path="res://assets/tileset/free-exclusion-zone-tileset-pixel-art/2 Background/Night/1.png" id="2_7amky"]
 [ext_resource type="Texture2D" uid="uid://djynisn721xtl" path="res://assets/tileset/free-exclusion-zone-tileset-pixel-art/2 Background/Night/2.png" id="3_ptmys"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://2gsvdyjwt6fy" path="res://assets/tileset/free-exclusion-zone-tileset-pixel-art/2 Background/Night/5.png" id="6_sqaet"]
 [ext_resource type="Texture2D" uid="uid://dcknbl4iwb8gm" path="res://assets/tileset/Power-Station-Free-Tileset-Pixel-Art/1 Tiles/Tileset.png" id="7_m1xge"]
 [ext_resource type="PackedScene" uid="uid://c3135dcqejfba" path="res://scene/player/player.tscn" id="7_qadan"]
+[ext_resource type="PackedScene" uid="uid://8jnidwlxccri" path="res://scene/obsicle/spike.tscn" id="8_hdodm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n34xq"]
 texture = ExtResource("7_m1xge")
@@ -572,4 +573,7 @@ tile_map_data = PackedByteArray("AAAAACcAAAAAAAEAAAAAACgAAAAAAAIAAAAAACYAAAAAAAA
 tile_set = SubResource("TileSet_ocbdh")
 
 [node name="Player" parent="." instance=ExtResource("7_qadan")]
-position = Vector2(58, 591)
+position = Vector2(106, 597)
+
+[node name="Spike" parent="." instance=ExtResource("8_hdodm")]
+position = Vector2(280, 593)
