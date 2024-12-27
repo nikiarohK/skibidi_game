@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://do72yy24nvpi8"
-path="res://.godot/imported/17.png-ee6d28c7e752484c099dfc3f7ac6198d.ctex"
+uid="uid://flbd62doy5dp"
+path="res://.godot/imported/jus_skibidi_toilet_spritesheet_by_hydraprodev_dgj6rtr.png-743e5e176b3bfde9736e86aeeddc2e68.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tileset/Power-Station-Free-Tileset-Pixel-Art/3 Objects/2 Decoration/17.png"
-dest_files=["res://.godot/imported/17.png-ee6d28c7e752484c099dfc3f7ac6198d.ctex"]
+source_file="res://assets/Character sprite/jus_skibidi_toilet_spritesheet_by_hydraprodev_dgj6rtr.png"
+dest_files=["res://.godot/imported/jus_skibidi_toilet_spritesheet_by_hydraprodev_dgj6rtr.png-743e5e176b3bfde9736e86aeeddc2e68.ctex"]
 
 [params]
 

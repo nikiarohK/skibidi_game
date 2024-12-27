@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://8bewklte2qnb"
-path="res://.godot/imported/Pointer2.png-6f35420aeead2e7fa573858e7caa9d5a.ctex"
+path="res://.godot/imported/Pointer2.png-2ba06d7820fb53b13e4d4235259a4ceb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://free-exclusion-zone-tileset-pixel-art/3 Objects/Other/Pointer2.png"
-dest_files=["res://.godot/imported/Pointer2.png-6f35420aeead2e7fa573858e7caa9d5a.ctex"]
+source_file="res://assets/tileset/free-exclusion-zone-tileset-pixel-art/3 Objects/Other/Pointer2.png"
+dest_files=["res://.godot/imported/Pointer2.png-2ba06d7820fb53b13e4d4235259a4ceb.ctex"]
 
 [params]
 

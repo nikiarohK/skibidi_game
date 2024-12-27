@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dyl03enkld4bv"
-path="res://.godot/imported/Box2.png-07cfc8aeb90cdb2fc922421ad45da5e2.ctex"
+path="res://.godot/imported/Box2.png-63438c9681e92c23353fc0cb483a2480.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://free-exclusion-zone-tileset-pixel-art/3 Objects/Other/Box2.png"
-dest_files=["res://.godot/imported/Box2.png-07cfc8aeb90cdb2fc922421ad45da5e2.ctex"]
+source_file="res://assets/tileset/free-exclusion-zone-tileset-pixel-art/3 Objects/Other/Box2.png"
+dest_files=["res://.godot/imported/Box2.png-63438c9681e92c23353fc0cb483a2480.ctex"]
 
 [params]
 

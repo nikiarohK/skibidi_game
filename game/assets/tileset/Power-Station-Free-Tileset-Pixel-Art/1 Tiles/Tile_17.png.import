@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dsoi81q5gnvuk"
-path="res://.godot/imported/Tile_17.png-5da84015282db028b878b2ab0412e105.ctex"
+path="res://.godot/imported/Tile_17.png-332d815d129e3911dad9c5b1190eb154.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Power-Station-Free-Tileset-Pixel-Art/1 Tiles/Tile_17.png"
-dest_files=["res://.godot/imported/Tile_17.png-5da84015282db028b878b2ab0412e105.ctex"]
+source_file="res://assets/tileset/Power-Station-Free-Tileset-Pixel-Art/1 Tiles/Tile_17.png"
+dest_files=["res://.godot/imported/Tile_17.png-332d815d129e3911dad9c5b1190eb154.ctex"]
 
 [params]
 
