@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 var SPEED = 200.0
-const JUMP_VELOCITY = -300.0
+const JUMP_VELOCITY = -350.0
 var direction := 1
 var flag_jump = true
 

@@ -1,11 +1,15 @@
-[gd_scene load_steps=16 format=3 uid="uid://r0ckknak2y63"]
+[gd_scene load_steps=17 format=3 uid="uid://r0ckknak2y63"]
 
-[ext_resource type="Script" path="res://scene/enemy/character_body_2d.gd" id="1_66jj2"]
+[ext_resource type="Script" path="res://scene/enemy/walk.gd" id="1_fiafg"]
 [ext_resource type="Texture2D" uid="uid://cfotce4o6hl2u" path="res://scene/enemy/Cameraman.png" id="2_voo7c"]
+[ext_resource type="Script" path="res://scene/enemy/pov_2d.gd" id="3_hasny"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sf1sx"]
+size = Vector2(79.4692, 32.1036)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_muppe"]
 radius = 20.0
-height = 74.0
+height = 76.1905
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ptqv5"]
 atlas = ExtResource("2_voo7c")
@@ -78,21 +82,29 @@ animations = [{
 "speed": 12.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sf1sx"]
-size = Vector2(116.274, 40.5349)
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3ln1k"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x10km"]
+size = Vector2(42.9977, 20)
 
 [node name="Enemy" type="Node2D"]
 scale = Vector2(0.728, 0.805)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-scale = Vector2(-1.27786, 1)
+scale = Vector2(1.278, 1)
 floor_max_angle = 0.698132
-script = ExtResource("1_66jj2")
+script = ExtResource("1_fiafg")
+
+[node name="Pov2D" type="Area2D" parent="CharacterBody2D"]
+position = Vector2(1.07483, 3.72671)
+script = ExtResource("3_hasny")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Pov2D"]
+position = Vector2(19.6357, -45.0737)
+rotation = 0.226229
+shape = SubResource("RectangleShape2D_sf1sx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(0, -37)
+position = Vector2(0, -32.2981)
+scale = Vector2(1, 0.850932)
 shape = SubResource("CapsuleShape2D_muppe")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
@@ -102,31 +114,13 @@ animation = &"Walk"
 autoplay = "Walk"
 frame_progress = 0.766147
 
-[node name="Area2D" type="Area2D" parent="CharacterBody2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
-position = Vector2(49.8905, -38.7914)
-rotation = 0.226229
-shape = SubResource("RectangleShape2D_sf1sx")
-
-[node name="wallcheck" type="Area2D" parent="CharacterBody2D"]
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D/wallcheck"]
-position = Vector2(19.349, -39.7516)
-rotation = 1.5712
+[node name="wall_trigger" type="Area2D" parent="CharacterBody2D"]
+position = Vector2(0, -37)
 scale = Vector2(1, 1)
-shape = SubResource("WorldBoundaryShape2D_3ln1k")
 
-[node name="floorcheck" type="Area2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/wall_trigger"]
+position = Vector2(0, 20.8509)
+shape = SubResource("RectangleShape2D_x10km")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floorcheck"]
-position = Vector2(-34.3407, -7.27596e-10)
-rotation = 0.000211273
-scale = Vector2(1.27786, -1)
-skew = 0.000133634
-shape = SubResource("WorldBoundaryShape2D_3ln1k")
-
-[connection signal="body_entered" from="CharacterBody2D/Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="CharacterBody2D/wallcheck" to="CharacterBody2D" method="_on_wallcheck_body_entered"]
-[connection signal="body_entered" from="floorcheck" to="CharacterBody2D" method="_on_floorcheck_body_entered"]
-[connection signal="body_exited" from="floorcheck" to="CharacterBody2D" method="_on_floorcheck_body_exited"]
+[connection signal="body_entered" from="CharacterBody2D/Pov2D" to="CharacterBody2D/Pov2D" method="_on_body_entered"]
+[connection signal="body_entered" from="CharacterBody2D/wall_trigger" to="CharacterBody2D" method="_on_wall_trigger_body_entered"]

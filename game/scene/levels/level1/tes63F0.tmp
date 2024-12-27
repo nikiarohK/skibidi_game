@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://bfj0ybqogcran"]
+[gd_scene load_steps=10 format=4 uid="uid://bfj0ybqogcran"]
 
 [ext_resource type="Texture2D" uid="uid://dpa86l7drwhwl" path="res://assets/tileset/free-exclusion-zone-tileset-pixel-art/2 Background/Night/1.png" id="2_7amky"]
 [ext_resource type="Texture2D" uid="uid://djynisn721xtl" path="res://assets/tileset/free-exclusion-zone-tileset-pixel-art/2 Background/Night/2.png" id="3_ptmys"]
@@ -519,9 +519,6 @@ texture = ExtResource("7_m1xge")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_n34xq")
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ffipd"]
-height = 76.4103
-
 [node name="Test level" type="Node2D"]
 
 [node name="BG" type="ParallaxBackground" parent="."]
@@ -563,11 +560,5 @@ position = Vector2(106, 597)
 position = Vector2(280, 593)
 
 [node name="Enemy" parent="." instance=ExtResource("7_c5mjy")]
-position = Vector2(534, 603)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0, 690)
-scale = Vector2(1, -23.4)
-shape = SubResource("CapsuleShape2D_ffipd")
+light_mask = 0
+position = Vector2(745, 607)
