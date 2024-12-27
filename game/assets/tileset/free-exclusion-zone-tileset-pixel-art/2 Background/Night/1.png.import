@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpa86l7drwhwl"
-path="res://.godot/imported/1.png-7b0dbb812c550785e6f488bb038201fa.ctex"
+path="res://.godot/imported/1.png-1ad43959307e138cf72078cee0aecdf9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://free-exclusion-zone-tileset-pixel-art/2 Background/Night/1.png"
-dest_files=["res://.godot/imported/1.png-7b0dbb812c550785e6f488bb038201fa.ctex"]
+source_file="res://assets/tileset/free-exclusion-zone-tileset-pixel-art/2 Background/Night/1.png"
+dest_files=["res://.godot/imported/1.png-1ad43959307e138cf72078cee0aecdf9.ctex"]
 
 [params]
 

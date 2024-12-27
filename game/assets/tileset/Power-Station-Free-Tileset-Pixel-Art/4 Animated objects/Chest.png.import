@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cte2enrqoluhu"
-path="res://.godot/imported/Chest.png-02f1c2badfcf6477ea49144e378c995d.ctex"
+path="res://.godot/imported/Chest.png-7ea364e0c3193221ccef81161237c99a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Power-Station-Free-Tileset-Pixel-Art/4 Animated objects/Chest.png"
-dest_files=["res://.godot/imported/Chest.png-02f1c2badfcf6477ea49144e378c995d.ctex"]
+source_file="res://assets/tileset/Power-Station-Free-Tileset-Pixel-Art/4 Animated objects/Chest.png"
+dest_files=["res://.godot/imported/Chest.png-7ea364e0c3193221ccef81161237c99a.ctex"]
 
 [params]
 

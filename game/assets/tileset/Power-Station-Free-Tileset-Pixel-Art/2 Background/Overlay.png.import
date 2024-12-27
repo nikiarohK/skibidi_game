@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dnxl5l2mn55k3"
-path="res://.godot/imported/Overlay.png-c6c3d897d4b82f3e267924b8b635d6ce.ctex"
+path="res://.godot/imported/Overlay.png-8ac34295049c1db67585f55490beb64b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Power-Station-Free-Tileset-Pixel-Art/2 Background/Overlay.png"
-dest_files=["res://.godot/imported/Overlay.png-c6c3d897d4b82f3e267924b8b635d6ce.ctex"]
+source_file="res://assets/tileset/Power-Station-Free-Tileset-Pixel-Art/2 Background/Overlay.png"
+dest_files=["res://.godot/imported/Overlay.png-8ac34295049c1db67585f55490beb64b.ctex"]
 
 [params]
 
