@@ -69,6 +69,7 @@ offset_left = 356.0
 offset_top = 112.0
 offset_right = 447.0
 offset_bottom = 203.0
+text = "Test"
 
 [node name="Button11" type="Button" parent="."]
 offset_left = 826.0
@@ -101,3 +102,4 @@ offset_right = 756.0
 offset_bottom = 346.0
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button10" to="." method="_on_button_10_pressed"]

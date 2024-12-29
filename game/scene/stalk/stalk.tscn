@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://gwpfsu5sl4la"]
+
+[ext_resource type="Script" path="res://scene/stalk/character_body_2d.gd" id="1_e2ydl"]
+[ext_resource type="Script" path="res://scene/stalk/pov.gd" id="2_15dsl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fvyyi"]
+size = Vector2(198.5, 597)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8onm8"]
+size = Vector2(216, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wcnmn"]
+size = Vector2(198, 18)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_cvj4m"]
+
+[node name="stalk" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_e2ydl")
+
+[node name="pov" type="Area2D" parent="CharacterBody2D"]
+script = ExtResource("2_15dsl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/pov"]
+position = Vector2(99.25, 299.5)
+shape = SubResource("RectangleShape2D_fvyyi")
+
+[node name="wall_trigger" type="Area2D" parent="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/wall_trigger"]
+position = Vector2(100, 11)
+shape = SubResource("RectangleShape2D_8onm8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(99, 12)
+shape = SubResource("RectangleShape2D_wcnmn")
+
+[node name="TextureRect" type="TextureRect" parent="CharacterBody2D"]
+modulate = Color(0.886275, 0, 0.0705882, 0.47451)
+offset_right = 5.0
+offset_bottom = 598.0
+texture = SubResource("CanvasTexture_cvj4m")
+
+[node name="TextureRect2" type="TextureRect" parent="CharacterBody2D"]
+modulate = Color(0.886275, 0, 0.0705882, 0.47451)
+offset_left = 194.0
+offset_top = 2.0
+offset_right = 199.0
+offset_bottom = 600.0
+texture = SubResource("CanvasTexture_cvj4m")
+
+[connection signal="body_entered" from="CharacterBody2D/pov" to="CharacterBody2D/pov" method="_on_body_entered"]
+[connection signal="body_entered" from="CharacterBody2D/wall_trigger" to="CharacterBody2D" method="_on_wall_trigger_body_entered"]

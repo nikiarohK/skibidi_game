@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvr8bv14n22uu"]
+
+[ext_resource type="Script" path="res://scene/shelter/shelter.gd" id="1_i72jb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_whapd"]
+size = Vector2(116.5, 108)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_27jcm"]
+
+[node name="shelter" type="Node2D"]
+
+[node name="shelter" type="Area2D" parent="."]
+script = ExtResource("1_i72jb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="shelter"]
+position = Vector2(58.75, 54)
+shape = SubResource("RectangleShape2D_whapd")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_right = 117.0
+offset_bottom = 7.0
+texture = SubResource("CanvasTexture_27jcm")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = 112.0
+offset_right = 117.0
+offset_bottom = 108.0
+texture = SubResource("CanvasTexture_27jcm")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_right = 5.0
+offset_bottom = 108.0
+texture = SubResource("CanvasTexture_27jcm")
+
+[connection signal="body_entered" from="shelter" to="shelter" method="_on_body_entered"]
+[connection signal="body_exited" from="shelter" to="shelter" method="_on_body_exited"]
