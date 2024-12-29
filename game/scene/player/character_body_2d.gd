@@ -8,6 +8,10 @@ var flag_jump = true
 @onready var anim = $AnimatedSprite2D
 @onready var sound = $AudioStreamPlayer
 
+
+func _ready() -> void:
+	pass
+
 func _physics_process(delta: float) -> void:
 	# Гравитация
 	if not is_on_floor():

@@ -1,0 +1,102 @@
+[gd_scene load_steps=12 format=3 uid="uid://c3135dcqejfba"]
+
+[ext_resource type="Texture2D" uid="uid://s6r5os7lrvgw" path="res://assets/Character sprite/jus_skibidi_toilet_spritesheet_by_hydraprodev_dgj6rtr.png" id="1_bu6sg"]
+[ext_resource type="Script" path="res://scene/player/character_body_2d.gd" id="1_whjm4"]
+[ext_resource type="AudioStream" uid="uid://bbter3bxaka26" path="res://sound/jump.mp3" id="3_veuxr"]
+[ext_resource type="Script" path="res://scene/player/interface.gd" id="4_0818p"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_675fu"]
+radius = 9.17577
+height = 38.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5mehi"]
+atlas = ExtResource("1_bu6sg")
+region = Rect2(5, 42, 30, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6bpd"]
+atlas = ExtResource("1_bu6sg")
+region = Rect2(35, 42, 30, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dixiy"]
+atlas = ExtResource("1_bu6sg")
+region = Rect2(0, 123, 34, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wrqlb"]
+atlas = ExtResource("1_bu6sg")
+region = Rect2(34, 123, 34, 39)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_31dcb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5mehi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6bpd")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dixiy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wrqlb")
+}],
+"loop": false,
+"name": &"Jump",
+"speed": 120.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cylr4"]
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="Player" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["player"]]
+script = ExtResource("1_whjm4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-1, -17)
+scale = Vector2(1.19881, 0.984916)
+shape = SubResource("CapsuleShape2D_675fu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(0, -15)
+scale = Vector2(1, 0.875)
+sprite_frames = SubResource("SpriteFrames_31dcb")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+offset = Vector2(0, -100)
+zoom = Vector2(2, 2)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CharacterBody2D"]
+stream = ExtResource("3_veuxr")
+
+[node name="Interface" type="CanvasLayer" parent="CharacterBody2D"]
+script = ExtResource("4_0818p")
+
+[node name="MarginContainer" type="MarginContainer" parent="CharacterBody2D/Interface"]
+offset_left = 181.0
+offset_top = -262.0
+offset_right = 253.0
+offset_bottom = -221.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CharacterBody2D/Interface/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+
+[node name="BALANCE" type="Label" parent="CharacterBody2D/Interface/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "БАЛАНС:"
+label_settings = SubResource("LabelSettings_cylr4")
+horizontal_alignment = 1
+vertical_alignment = 1
