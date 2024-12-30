@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://b8225npov5jj7"]
+[gd_scene load_steps=14 format=4 uid="uid://b8225npov5jj7"]
 
 [ext_resource type="Script" path="res://scene/levels/BG/bg.gd" id="1_ddh6i"]
 [ext_resource type="Texture2D" uid="uid://dpa86l7drwhwl" path="res://assets/tileset/free-exclusion-zone-tileset-pixel-art/2 Background/Night/1.png" id="2_mq7lm"]
@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://8jnidwlxccri" path="res://scene/obsicle/spike.tscn" id="9_u7sci"]
 [ext_resource type="PackedScene" uid="uid://r0ckknak2y63" path="res://scene/enemy/enemy.tscn" id="10_3b1xp"]
 [ext_resource type="PackedScene" uid="uid://qe0yeg0w4jay" path="res://scene/items/coins/coins.tscn" id="10_5vu0p"]
-[ext_resource type="Script" path="res://scene/player/interface.gd" id="12_oa1qt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uub37"]
 texture = ExtResource("7_qykie")
@@ -651,33 +650,3 @@ position = Vector2(1504, 567)
 
 [node name="coins" parent="." instance=ExtResource("10_5vu0p")]
 position = Vector2(379, 579)
-
-[node name="Interface" type="CanvasLayer" parent="."]
-script = ExtResource("12_oa1qt")
-
-[node name="MarginContainer" type="MarginContainer" parent="Interface"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -427.0
-offset_top = 158.0
-offset_right = -355.0
-offset_bottom = 199.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Interface/MarginContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="BALANCE" type="Label" parent="Interface/MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-text = "БАЛАНС:"
-horizontal_alignment = 1
-vertical_alignment = 1

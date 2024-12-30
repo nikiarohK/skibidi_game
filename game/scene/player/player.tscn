@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://c3135dcqejfba"]
+[gd_scene load_steps=11 format=3 uid="uid://c3135dcqejfba"]
 
 [ext_resource type="Texture2D" uid="uid://s6r5os7lrvgw" path="res://assets/Character sprite/jus_skibidi_toilet_spritesheet_by_hydraprodev_dgj6rtr.png" id="1_bu6sg"]
 [ext_resource type="Script" path="res://scene/player/character_body_2d.gd" id="1_whjm4"]
 [ext_resource type="AudioStream" uid="uid://bbter3bxaka26" path="res://sound/jump.mp3" id="3_veuxr"]
+[ext_resource type="Script" path="res://scene/player/interface.gd" id="4_0818p"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_675fu"]
 radius = 9.17577
@@ -69,6 +70,39 @@ autoplay = "Idle"
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 offset = Vector2(0, -100)
 zoom = Vector2(2, 2)
+
+[node name="Interface" type="CanvasLayer" parent="CharacterBody2D/Camera2D"]
+script = ExtResource("4_0818p")
+
+[node name="MarginContainer" type="MarginContainer" parent="CharacterBody2D/Camera2D/Interface"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -427.0
+offset_top = 158.0
+offset_right = -355.0
+offset_bottom = 199.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+tooltip_text = "
+
+"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CharacterBody2D/Camera2D/Interface/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="BALANCE" type="Label" parent="CharacterBody2D/Camera2D/Interface/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "БАЛАНС:"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CharacterBody2D"]
 stream = ExtResource("3_veuxr")

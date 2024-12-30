@@ -15,6 +15,8 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	# Гравитация
 	if not is_on_floor():
+		if velocity.x == 0 and not flag_jump:
+			velocity.x = SPEED
 		velocity += get_gravity() * delta
 		if flag_jump:
 			anim.play("Jump")
@@ -40,5 +42,4 @@ func _physics_process(delta: float) -> void:
 	elif not Input.is_action_pressed("ui_accept"):
 		velocity.y = -JUMP_VELOCITY
 		velocity.x = 0
-
 	move_and_slide()
